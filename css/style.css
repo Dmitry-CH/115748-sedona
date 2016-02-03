@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
+	list-style: none;
 }
 
 .clearfix::after {
@@ -52,6 +53,8 @@ h3 {
 
 .main-header {
 	position: relative;
+	height: 56px;
+	line-height: 56px;
 	background-color: #ffffff;
 }
 
@@ -62,7 +65,7 @@ h3 {
 }
 
 .main-nav ul {
-	list-style: none;
+	padding: 0 6%;
 }
 
 .main-nav li {
@@ -74,18 +77,18 @@ h3 {
 	margin-right: 20%;
 }
 
+.main-nav .align-right {
+	text-align: right;
+}
+
 .main-nav a {
-	display: block;
-	padding: 17px 0;
 	color: #000000;
-	text-align: center;
 	text-decoration: none;
 }
 
 .main-nav a:hover {
-	background-color: #fdd;
+	color: #81b3d2;
 }
-
 
 .intro {
 	min-height: 508px;
@@ -139,17 +142,44 @@ h3 {
 }
 
 .block-search {
+	position: relative;
 	min-height: 291px;
+	text-align: center;
 	background-color: #9ACD32;
 }
 
 .search-form {
-	width: ;
+	position: absolute;
+	top: 291px;
+	left: 50%;
+	width: 568px;
+	height: 0;
+	margin-left: -284px;
+	overflow: hidden;
+	background-color: #ffffff;
+}
+
+.search-form.open {
+	height: 395px;
+}
+
+.search-form label {
+	display: block;
+}
+
+.search-form input {
+	display: inline-block;
+	background-color: #f2f2f2;
+}
+
+.search-form .search {
+	display: block;
 }
 
 .block-map {
-	height: 594px;
+	height: 593px;
 	background: url(../img/index_bg_map.jpg) no-repeat;
+	background-position: bottom center;
 }
 
 
@@ -158,7 +188,6 @@ h3 {
 	height: 120px;
 	line-height: 120px;
 	text-align: center;
-	vertical-align: middle;
 	background-color: rgba(254, 254, 254, 0.9);
 }
 
@@ -175,4 +204,64 @@ h3 {
 .footer-academy p,
 .footer-academy img {
 	display: inline-block;
+	vertical-align: middle;
+}
+
+/* === Hotels.html === */
+
+.column {
+	float: left;
+	width: 50%;
+}
+
+.block-filter,
+.block-sort {
+	padding: 0 6%;
+}
+
+.block-filter {
+	height: 217px;
+	background-color: #00CED1;
+}
+
+.block-sort {
+	min-height: 86px;
+	line-height: 86px;
+	background-color: #FFFACD;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.block-sort .sort-result,
+.sort-list,
+.sort-list ul,
+.sort-list li,
+.icon-top,
+.icon-bottom {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.block-sort .sort-icon {
+	text-align: right;
+}
+
+.block-list-hotel .row-hotel {
+	padding: 10px 6%;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.block-list-hotel img,
+.block-list-hotel .hotel-desc,
+.hotel-desc p {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.block-list-hotel .rating {
+	text-align: right;
+}
+
+.block-list-hotel .stars li {
+	display: inline-block;
+	vertical-align: top;
 }
