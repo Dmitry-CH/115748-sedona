@@ -83,7 +83,7 @@ h3 {
 }
 
 .main-nav ul {
-	padding: 17px 6%;
+	padding: 17px 0;
 	margin: 0;
 	list-style: none;
 }
@@ -91,6 +91,7 @@ h3 {
 .main-nav li {
 	float: left;
 	width: 20%;
+	padding-left: 6%;
 }
 
 .main-nav li:nth-child(2) {
@@ -98,6 +99,8 @@ h3 {
 }
 
 .main-nav .align-right {
+	padding-left: 0;
+	padding-right: 6%;
 	text-align: right;
 }
 
@@ -214,9 +217,29 @@ h3 {
 
 .block-search {
 	position: relative;
-	min-height: 291px;
+	padding-top: 10px;
 	text-align: center;
 	background-color: #ffffff;
+}
+
+.block-search h2 {
+	margin: 48px 0 32px;
+}
+
+.block-search p {
+	margin-bottom: 48px;
+}
+
+.block-search a {
+	display: block;
+	width: 568px;
+	height: 86px;
+	margin: 0 auto;
+	font-size: 21px;
+	line-height: 86px;
+	color: #ffffff;
+	text-decoration: none;
+	background-color: #766357;
 }
 
 .search-form {
@@ -256,8 +279,7 @@ h3 {
 
 .main-footer {
 	width: 100%;
-	height: 120px;
-	line-height: 120px;
+	padding: 36px 0;
 	text-align: center;
 	background-color: rgba(254, 254, 254, 0.9);
 }
@@ -274,15 +296,27 @@ h3 {
 	width: calc(100% / 3);
 }
 
+.footer-info {
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.icon-social {
+	font-size: 0;
+}
+
 .icon-social .social-btn {
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
 	width: 46px;
 	height: 48px;
-	color: #ffffff;
-	text-decoration: none;
+	margin-right: 6px;
 	background-color: #81b3d2;
+}
+
+.icon-social .social-btn:last-child {
+	margin-right: 0;
 }
 
 .icon-twitter::before,
@@ -291,6 +325,11 @@ h3 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	margin: 0;
+	transform: translate(-50%, -50%);
+	font-size: 23px;
+	color: #ffffff;
+	text-decoration: none;
 }
 
 .footer-academy p,
