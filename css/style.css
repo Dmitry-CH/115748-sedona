@@ -150,6 +150,10 @@ h3 {
 
 }
 
+.block-img {
+	background-color: #81b3d2;
+}
+
 .block-img .box-title,
 .block-img .picture {
 	float: left;
@@ -157,19 +161,24 @@ h3 {
 
 .block-img .box-title {
 	width: calc(100% / 3);
-	height: 256px;
-	padding: 54px 5%;
+	padding: 0 5%;
 	color: #ffffff;
 	text-align: center;
 	background-color: #81b3d2;
 }
 
 .box-title h3 {
+	margin-top: 50px;
+	margin-bottom: 25px;
 	color: #ffffff;
 }
 
 .box-title p {
-	margin-top: 22px;
+	margin: 22px 0;
+}
+
+.box-title p:last-child {
+	margin-bottom: 54px;
 }
 
 .block-img .picture {
@@ -230,7 +239,7 @@ h3 {
 	margin-bottom: 48px;
 }
 
-.block-search a {
+.block-search .btn-search {
 	display: block;
 	width: 568px;
 	height: 86px;
@@ -248,6 +257,7 @@ h3 {
 	left: 50%;
 	width: 568px;
 	height: 0;
+	padding: 55px 0;
 	margin-left: -284px;
 	overflow: hidden;
 	background-color: #ffffff;
@@ -258,16 +268,66 @@ h3 {
 }
 
 .search-form label {
+	position: relative;
 	display: block;
+	height: 38px;
+	padding: 0 55px;
+	margin-bottom: 29px;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: bold;
+	text-align: left;
+
+	background-color: #fdd;
+}
+
+.search-form label .arrival,
+.search-form label .departure,
+.search-form input {
+	vertical-align: middle;
+}
+
+.search-form label .arrival::after,
+.search-form label .departure::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 65px;
+	width: 21px;
+	height: 21px;
+	transform: translateY(-50%);
+
+	background-color: #f00;
+}
+
+.search-form label .arrival {
+	margin-right: 17px;
+}
+
+.search-form label .departure {
+	margin-right: 13px;
 }
 
 .search-form input {
 	display: inline-block;
+	width: 346px;
+	height: 38px;
+	padding-left: 15px;
+	padding-right: 40px;
+	border: 0;
+	outline: 0;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: bold;
+	text-align: left;
 	background-color: #f2f2f2;
 }
 
-.search-form .search {
-	display: block;
+.search-form .btn-search-form {
+	width: 458px;
+	height: 58px;
+	line-height: 58px;
+	background-color: #81b3d2;
 }
 
 .block-map {
@@ -280,6 +340,7 @@ h3 {
 .main-footer {
 	width: 100%;
 	padding: 36px 0;
+	font-size: 0;
 	text-align: center;
 	background-color: rgba(254, 254, 254, 0.9);
 }
@@ -292,17 +353,14 @@ h3 {
 .footer-info,
 .icon-social,
 .footer-academy {
-	float: left;
+	display: inline-block;
+	vertical-align: middle;
 	width: calc(100% / 3);
 }
 
 .footer-info {
 	font-size: 21px;
 	font-weight: bold;
-}
-
-.icon-social {
-	font-size: 0;
 }
 
 .icon-social .social-btn {
@@ -336,6 +394,11 @@ h3 {
 .footer-academy img {
 	display: inline-block;
 	vertical-align: middle;
+}
+
+.footer-academy p {
+	margin-right: 8px;
+	font-size: 14px;
 }
 
 /* === Hotels.html === */
@@ -395,4 +458,103 @@ h3 {
 .block-list-hotel .stars li {
 	display: inline-block;
 	vertical-align: top;
+}
+
+
+
+.filter-cost {
+  width: 330px;
+  
+  background-color: #fdd;
+}
+
+.filter-cost p {
+  margin-bottom: 9px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  font-size: 0;
+  
+  background-color: #0f0;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background-color: #d00;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+  vertical-align: top;
+  width: 110px;
+  padding-left: 53px;
+  font-size: 14px;
+  line-height: 38px;
+  cursor: pointer;
+  
+  background-color: #ddf;
+}
+
+
+.price-controls input {
+  width: 60px;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  
+  background-color: #fff;
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.range-controls .scale {
+  width: 100%;
+  height: 2px;
+  background-color: #999;
+}
+
+
+.range-controls .bar {
+  margin-left: 0;
+  width: 80%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  border: 8px solid #fff;
+  border-radius: 100%;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.min-toggle {
+  left: 0;
+}
+
+.max-toggle {
+  left: 80%;
 }

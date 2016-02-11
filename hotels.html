@@ -69,14 +69,14 @@
 					    <div class="filter-cost">
 					      <p>Стоимость в сутки (Р):</p>
 
-					      <div class="range-field">
-					        <label for="from">
+					      <div class="price-controls">
+					        <label class="min-price" for="from">
 					          От
-					          <input id="from" type="text">
+					          <input id="from" type="text" value="0">
 					        </label>
-					        <label for="to">
+					        <label class="max-price" for="to">
 					          До
-					          <input id="to" type="text">
+					          <input id="to" type="text" value="3000">
 					        </label>
 					      </div>
 
@@ -88,9 +88,10 @@
 					        <div class="toggle max-toggle"></div>
 					      </div>
 					    </div>
+
+					    <a href="#">Показать</a>
 					  </div>
 
-				    <a href="#" name="show-hotels" type="submit">Показать</a>
 				  </form>
 				</div>
 
