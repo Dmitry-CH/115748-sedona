@@ -240,6 +240,7 @@ h3 {
 	color: #ffffff;
 	text-decoration: none;
 	background-color: #766357;
+	cursor: pointer;
 }
 
 .search-form {
@@ -251,6 +252,7 @@ h3 {
 	margin-left: -284px;
 	overflow: hidden;
 	background-color: #ffffff;
+	transition: height 0.3s ease-in;
 }
 
 .search-form.open {
@@ -377,7 +379,7 @@ h3 {
 }
 
 .block-list-hotel .row-hotel {
-	padding: 10px 6%;
+	padding: 30px 6%;
 	border-bottom: 1px solid #e5e5e5;
 }
 
