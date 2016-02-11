@@ -33,7 +33,7 @@
 
         <div class="content-info">
           <p class="title">
-            Седона - небольшой городок в Аризоне,<br>
+            Седона &ndash; небольшой городок в Аризоне,<br>
             заслуживающий большего!
           </p>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -42,8 +42,8 @@
         <div class="block-img clearfix">
           <div class="box-title">
             <h3>Настоящий<br> городок</h3>
-            <p>— №1 —</p>
-            <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+            <p>&ndash; №1 &ndash;</p>
+            <p>Седона &ndash; не аттракцион для туристов, там течет своя жизнь</p>
           </div>
 
           <div class="picture img1"></div>
@@ -71,7 +71,7 @@
 
           <div class="box-title">
             <h3>Там есть<br> мост дьявола</h3>
-            <p>— №2 —</p>
+            <p>&ndash; №2 &ndash;</p>
             <p>Да, по нему можно пройти! Если&nbsp;конечно вы осмелитесь</p>
           </div>
         </div>
@@ -79,19 +79,19 @@
         <div class="block-desc clearfix">
           <div class="desc">
             <h3>Небольшая<br> площадь</h3>
-            <p>— №3 —</p>
+            <p>&ndash; №3 &ndash;</p>
             <p>Все достопримечательности находятся очень близко</p>
           </div>
             
           <div class="desc">
             <h3>Красивая<br> дорога</h3>
-            <p>— №4 —</p>
+            <p>&ndash; №4 &ndash;</p>
             <p>Ехать в седону из Лас-Вегаса совсем не скучно!</p>
           </div>
 
           <div class="desc">
             <h3>Мало<br> туристов</h3>
-            <p>— №5 —</p>
+            <p>&ndash; №5 &ndash;</p>
             <p>Большинство едет в гранд каньон и толпится там</p>
           </div>
         </div>
@@ -102,22 +102,32 @@
             Укажите предполагаемые даты поездки,<br>
             и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
-          <a id="toggle">Поиск гостиницы в седоне</a>
+          <a class="btn-search" id="toggle">Поиск гостиницы в седоне</a>
 
-          <div id="open" class="search-form">
+          <div class="search-form" id="open">
             <form action="" method="post" name="">
-              <label for="arrival">
-                Дата Заезда
-                <input id="arrival" type="text" name="" value="" placeholder="">
+              <label class="date-of-stay icon-calendar">
+                <span>Дата Заезда:</span>
+                <input type="datetime" name="" value="" placeholder="24 Апреля 2016">
               </label>
-              <label for="departure">
-                Дата Выезда
-                <input id="departure" type="text" name="" value="" placeholder="">
-              </label>
-              <input type="text" name="" value="" placeholder="0">
-              <input type="text" name="" value="" placeholder="0">
 
-              <a class="search" href="#">Найти</a>
+              <label class="date-of-stay icon-calendar">
+                <span>Дата Выезда:</span>
+                <input type="datetime" name="" value="" placeholder="4 Июля 2016">
+              </label>
+
+              <div class="clearfix">
+                <label class="number-of-people a1">
+                  <span>Взрослые:</span>
+                  <input type="text" name="" value="" placeholder="0">
+                </label>
+
+                <label class="number-of-people a2">
+                  <span>Дети:</span>
+                  <input type="text" name="" value="" placeholder="0">
+                </label>
+              </div>
+              <a class="btn-search btn-search-form" href="#">Найти</a>
             </form>
           </div>
         </div>
