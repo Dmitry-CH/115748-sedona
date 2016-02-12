@@ -14,6 +14,7 @@
 	text-align: right;
 }
 
+
 .color1 {
 	background-color: #D8BFD8;
 }
@@ -143,7 +144,7 @@ h3 {
 }
 
 .content-info {
-	padding: 10px 6%;
+	padding: 10px 0;
 	line-height: 26px;
 	text-align: center;
 	background-color: #ffffff;
@@ -162,6 +163,8 @@ h3 {
 }
 
 .block-img {
+	height: 256px;
+	overflow: hidden;
 	background-color: #81b3d2;
 }
 
@@ -218,10 +221,12 @@ h3 {
 }
 
 .block-info .info {
+	padding: 0 4%;
 	background-color: #ffffff;
 }
 
 .block-info h3 {
+	position: relative;
 	margin-top: 162px;
 	margin-bottom: 24px;
 }
@@ -232,6 +237,28 @@ h3 {
 
 .block-info p:last-child {
 	margin-bottom: 81px;
+}
+
+.info-house::before,
+.info-food::before,
+.info-souvenirs::before {
+	content: "";
+	position: absolute;
+	top: -102px;
+	left: 50%;
+	width: 76px;
+	height: 80px;
+	transform: translateX(-50%);
+	background: url(../img/index_icon.png) no-repeat;
+	background-position: 0 0;
+}
+
+.info-food::before {
+	background-position: -94px 0;
+}
+
+.info-souvenirs::before {
+	background-position: -182px 0;
 }
 
 .block-desc .desc {
@@ -299,7 +326,6 @@ h3 {
 }
 
 .search-form label {
-	position: relative;
 	height: 38px;
 	margin-bottom: 29px;
 	font-size: 14px;
@@ -309,14 +335,22 @@ h3 {
 }
 
 .search-form input {
+	width: 346px;
+	height: 38px;
+	padding-left: 15px;
+	padding-right: 41px;
+	border: 0;
+	outline: 0;
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: bold;
-	text-align: left;
 	text-transform: uppercase;
+	text-align: left;
+	background-color: #f2f2f2;
 }
 
 .search-form .date-of-stay {
+	position: relative;
 	display: block;
 }
 
@@ -339,72 +373,63 @@ h3 {
 	transform: translateY(-50%);
 }
 
-.search-form input {
-	width: 346px;
-	height: 38px;
-	padding-left: 15px;
-	padding-right: 41px;
-	border: 0;
-	outline: 0;
-	font-size: 14px;
-	line-height: 26px;
-	font-weight: bold;
-	text-align: left;
-	background-color: #f2f2f2;
-}
-
 .search-form .number-of-people {
 	padding: 0;
 	margin-bottom: 55px;
 }
 
-.number-of-people.a1 {
+.number-of-people.adult {
 	float: left;
 }
 
-.number-of-people.a2 {
+.number-of-people.kid {
 	float: right;
 }
 
-.search-form .a1 span {
+.adult .indent {
 	margin-right: 37px;
 }
 
-.search-form .a2 span {
-	width: 180px;
+.kid .indent {
 	margin-right: 26px;
 }
 
-.search-form .a2 input {
+.number-of-people input {
+	width: 114px;
+	padding: 0 35px;
+	text-align: center;
+}
+
+.kid input {
 	margin-right: -1px;
+}
+
+.number-of-people .position {
+	position: relative;
 }
 
 .number-of-people .icon-minus::before {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 50%;
+	left: 14px;
 	margin: 0;
-	/*transform: translate(-50%, -50%);*/
-	font-size: 23px;
-	color: red;
+	transform: translate(0, -50%);
+	font-size: 14px;
+	color: #a9a9a9;
+	font-weight: normal;
 	text-decoration: none;
 }
 
 .number-of-people .icon-plus::after {
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 50%;
+	right: 14px;
 	margin: 0;
-	/*transform: translate(-50%, -50%);*/
-	font-size: 23px;
-	color: red;
+	transform: translate(0, -50%);
+	font-size:14px;
+	color: #a9a9a9;
+	font-weight: normal;
 	text-decoration: none;
-}
-
-.search-form .number-of-people input {
-	width: 114px;
-	padding: 0 35px;
-	text-align: center;
 }
 
 .search-form .btn-search-form {
@@ -590,7 +615,7 @@ h3 {
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
-  font-weight: bold;
+  font-weight: normal;
   cursor: pointer;
 }
 
@@ -598,6 +623,7 @@ h3 {
   width: 76px;
   font-size: inherit;
   color: inherit;
+  font-weight: inherit;
   background: none;
   border: none;
   outline: none;
