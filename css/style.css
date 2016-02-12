@@ -6,6 +6,14 @@
   clear: both;
 }
 
+.text-align-left {
+	text-align: left;
+}
+
+.text-align-right {
+	text-align: right;
+}
+
 .color1 {
 	background-color: #D8BFD8;
 }
@@ -119,7 +127,7 @@ h3 {
 	height: 508px;
 	padding-top: 76px;
 	text-align: center;
-	background: url(../img/index_bg_sedona.jpg) no-repeat;
+	background: #81b3d2 url(../img/index_bg_sedona.jpg) no-repeat;
 	background-position: center;
 }
 
@@ -281,6 +289,7 @@ h3 {
 	margin-left: -284px;
 	overflow: hidden;
 	background-color: #ffffff;
+	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
 	transition: all 0.3s ease-in;
 }
 
@@ -370,6 +379,28 @@ h3 {
 	margin-right: -1px;
 }
 
+.number-of-people .icon-minus::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	/*transform: translate(-50%, -50%);*/
+	font-size: 23px;
+	color: red;
+	text-decoration: none;
+}
+
+.number-of-people .icon-plus::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	/*transform: translate(-50%, -50%);*/
+	font-size: 23px;
+	color: red;
+	text-decoration: none;
+}
+
 .search-form .number-of-people input {
 	width: 114px;
 	padding: 0 35px;
@@ -385,7 +416,7 @@ h3 {
 
 .block-map {
 	height: 593px;
-	background: url(../img/index_bg_map.jpg) no-repeat;
+	background: #81b3d2 url(../img/index_bg_map.jpg) no-repeat;
 	background-position: bottom center;
 }
 
@@ -467,8 +498,9 @@ h3 {
 }
 
 .block-filter {
-	height: 217px;
-	background-color: #00CED1;
+	padding-top: 30px;
+	background: #81b3d2 url(../img/hotels_bg_block-filter.jpg) no-repeat;
+	background-position: center;
 }
 
 .block-sort {
@@ -516,15 +548,16 @@ h3 {
 
 
 .filter-cost {
+	display: inline-block;
   width: 330px;
-  
-  background-color: #fdd;
+  text-align: left;
 }
 
 .filter-cost p {
-  margin-bottom: 9px;
+  margin-bottom: 10px;
   font-size: 16px;
   line-height: 21px;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -532,11 +565,9 @@ h3 {
   position: relative;
   height: 36px;
   margin-bottom: 20px;
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
   border-radius: 2px;
   font-size: 0;
-  
-  background-color: #0f0;
 }
 
 .price-controls::after {
@@ -546,32 +577,30 @@ h3 {
   left: 50%;
   width: 2px;
   height: 22px;
-  background-color: #d00;
+  background-color: #ffffff;
   transform: translate(-50%, -50%);
 }
 
 .price-controls label {
   display: inline-block;
-  vertical-align: top;
-  width: 110px;
+  vertical-align: middle;
+  width: 163px;
+  padding: 6px 0;
   padding-left: 53px;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 21px;
+  color: #ffffff;
+  font-weight: bold;
   cursor: pointer;
-  
-  background-color: #ddf;
 }
 
-
 .price-controls input {
-  width: 60px;
+  width: 76px;
   font-size: inherit;
   color: inherit;
   background: none;
   border: none;
   outline: none;
-  
-  background-color: #fff;
 }
 
 .range-controls {
@@ -582,15 +611,14 @@ h3 {
 .range-controls .scale {
   width: 100%;
   height: 2px;
-  background-color: #999;
+  background-color: rgba(255, 255, 255, 0.3);
 }
-
 
 .range-controls .bar {
   margin-left: 0;
   width: 80%;
   height: 2px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .toggle {
@@ -598,10 +626,15 @@ h3 {
   top: -9px;
   width: 4px;
   height: 4px;
-  border: 8px solid #fff;
+  border: 8px solid #ffffff;
   border-radius: 100%;
-  background-color: #000;
+  box-sizing: content-box;
+  background-color: #ababab;
   cursor: pointer;
+}
+
+.toggle:hover {
+	background-color: #1c4f80;
 }
 
 .min-toggle {
@@ -610,4 +643,17 @@ h3 {
 
 .max-toggle {
   left: 80%;
+}
+
+.filter-cost a {
+	display: block;
+	width: 136px;
+	height: 36px;
+	padding: 6px 0;
+	margin: 31px auto;
+	border: 2px solid #ffffff;
+  border-radius: 2px;
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
 }
