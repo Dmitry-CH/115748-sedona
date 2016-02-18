@@ -122,6 +122,14 @@ h3 {
 	color: #81b3d2;
 }
 
+.main-nav .nav-activ a {
+	color: #766357;
+}
+
+.main-nav .nav-activ a:hover {
+	color: #604e43;
+}
+
 
 .intro {
 	position: relative;
@@ -156,6 +164,7 @@ h3 {
 	font-size: 20px;
 	color: #000000;
 	font-weight: bold;
+	word-spacing: 5px;
 }
 
 .content-info p:last-child {
@@ -200,13 +209,13 @@ h3 {
 	height: 256px;
 }
 
-.block-img .img1 {
+.block-img .real-town {
 	background: url(../img/index_bg_1.jpg) no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 
-.block-img .img2 {
+.block-img .devil-bridge {
 	background: url(../img/index_bg_2.jpg) no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -307,12 +316,13 @@ h3 {
 }
 
 .search-form {
+	z-index: 20;
 	position: absolute;
-	top: 291px;
+	top: 290px;
 	left: 50%;
 	width: 568px;
 	height: 0;
-	padding: 0 55px;
+	padding: 0;
 	margin-left: -284px;
 	overflow: hidden;
 	background-color: #ffffff;
@@ -322,114 +332,130 @@ h3 {
 
 .search-form.open {
 	height: 395px;
-	padding: 55px;
+	padding: 55px 0;
 }
 
-.search-form label {
-	height: 38px;
-	margin-bottom: 29px;
+.search-form .row {
+	padding: 0 55px;
+}
+
+.search-form label,
+.search-form input {
 	font-size: 14px;
 	line-height: 26px;
+	color: #000000;
 	font-weight: bold;
+	text-transform: uppercase;
 	text-align: left;
 }
 
+.search-form label {
+	float: left;
+	padding: 6px 0;
+	margin-bottom: 29px;
+}
+
 .search-form input {
+	float: right;
 	width: 346px;
-	height: 38px;
+	padding: 6px 0;
 	padding-left: 15px;
 	padding-right: 41px;
 	border: 0;
 	outline: 0;
-	font-size: 14px;
-	line-height: 26px;
-	font-weight: bold;
-	text-transform: uppercase;
-	text-align: left;
 	background-color: #f2f2f2;
 }
 
-.search-form .date-of-stay {
+.search-form input:focus {
+	background-color: #ffffff;
+	outline: 2px solid #e5e5e5;
+}
+
+.a1 {
 	position: relative;
-	display: block;
-}
-
-.search-form .date-of-stay span {
-	float: left;
-	line-height: 38px;
-}
-
-.search-form .date-of-stay input {
 	float: right;
 }
 
-.date-of-stay.icon-calendar::before {
+.search-form .icon-calendar::before {
 	position: absolute;
 	top: 50%;
 	right: 10px;
+	width: 25px;
+	height: 25px;
 	margin: 0;
+	transform: translateY(-50%);
 	font-size: 21px;
 	color: #c2c2c2;
-	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+.search-form .icon-calendar:hover::before {
+	color: #000000;
 }
 
 .search-form .number-of-people {
-	padding: 0;
-	margin-bottom: 55px;
-}
-
-.number-of-people.adult {
 	float: left;
+	width: 50%;
 }
 
-.number-of-people.kid {
+.number-of-people .input-container {
+	position: relative;
 	float: right;
 }
 
-.adult .indent {
-	margin-right: 37px;
-}
-
-.kid .indent {
-	margin-right: 26px;
+.number-of-people label {
+	margin-bottom: 54px;
 }
 
 .number-of-people input {
 	width: 114px;
-	padding: 0 35px;
+	padding: 6px 35px;
 	text-align: center;
 }
 
-.kid input {
-	margin-right: -1px;
+.number-of-people .inp-adults {
+	margin-right: 3px;
 }
 
-.number-of-people .position {
-	position: relative;
+.number-of-people .children {
+	margin-left: 52px;
 }
 
 .number-of-people .icon-minus::before {
 	position: absolute;
 	top: 50%;
-	left: 14px;
+	left: 6px;
+	width: 25px;
+	height: 25px;
 	margin: 0;
-	transform: translate(0, -50%);
+	transform: translateY(-50%);
 	font-size: 14px;
+	line-height: 25px;
 	color: #a9a9a9;
 	font-weight: normal;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 .number-of-people .icon-plus::after {
 	position: absolute;
 	top: 50%;
-	right: 14px;
+	left: 84px;
+	width: 25px;
+	height: 25px;
 	margin: 0;
-	transform: translate(0, -50%);
-	font-size:14px;
+	transform: translateY(-50%);
+	font-size: 14px;
+	line-height: 25px;
 	color: #a9a9a9;
 	font-weight: normal;
 	text-decoration: none;
+	cursor: pointer;
+}
+
+.number-of-people .icon-minus:hover::before,
+.number-of-people .icon-plus:hover::after {
+	color: #000000;
 }
 
 .search-form .btn-search-form {
@@ -439,10 +465,13 @@ h3 {
 	background-color: #81b3d2;
 }
 
+.search-form .btn-search-form:hover {
+	background-color: #669ec0;
+}
+
+
 .block-map {
 	height: 593px;
-	background: #81b3d2 url(../img/index_bg_map.jpg) no-repeat;
-	background-position: bottom center;
 }
 
 
@@ -480,6 +509,10 @@ h3 {
 	height: 48px;
 	margin-right: 6px;
 	background-color: #81b3d2;
+}
+
+.icon-social .social-btn:hover {
+	background-color: #669ec0;
 }
 
 .icon-social .social-btn:last-child {
@@ -528,25 +561,99 @@ h3 {
 	background-position: center;
 }
 
+.filter-infrast,
+.filter-hotel-types {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.filter-infrast {
+	margin-right: 112px;
+}
+
+.filter-infrast p,
+.filter-hotel-types p {
+	margin-bottom: 30px;
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.filter-infrast label,
+.filter-hotel-types label {
+	display: block;
+	margin-bottom: 23px;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.filter-infrast input[type="checkbox"],
+.filter-hotel-types input[type="checkbox"] {
+	display: none;
+}
+
+.filter-infrast input[type="checkbox"] + label::before,
+.filter-hotel-types input[type="checkbox"] + label::before {
+	content: "\2610";
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  margin-right: 0.2em;
+	font-size: 26px;
+	line-height: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-family: "symbols-sedona";
+  text-align: center;
+  text-transform: none;
+}
+
+.filter-infrast input[type="checkbox"]:checked + label::before,
+.filter-hotel-types input[type="checkbox"]:checked + label::before {
+	content: "\2611";
+}
+
 .block-sort {
-	min-height: 86px;
-	line-height: 86px;
-	background-color: #FFFACD;
+	padding-top: 27px;
+	padding-bottom: 27px;
 	border-bottom: 1px solid #e5e5e5;
 }
 
-.block-sort .sort-result,
+.sort-result,
 .sort-list,
 .sort-list ul,
 .sort-list li,
 .icon-top,
 .icon-bottom {
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 }
 
 .block-sort .sort-icon {
 	text-align: right;
+}
+
+.block-sort .sort-result {
+	margin-right: 50px;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.block-sort .sort-list {
+	font-size: 12px;
+}
+
+.block-sort .sort-list a {
+	color: #cccccc;
+	text-decoration: none;
+	border-bottom: 1px dotted #81b3d2;
+}
+
+.sort-list .active a {
+	color: #81b3d2;
+	border-bottom: none;
 }
 
 .block-list-hotel .row-hotel {

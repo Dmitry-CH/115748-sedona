@@ -21,7 +21,7 @@
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
             <li class="align-right"><a href="#">Карта штата</a></li>
-            <li class="align-right"><a href="hotels.html">Гостиницы</a></li>
+            <li class="align-right nav-activ"><a href="hotels.html">Гостиницы</a></li>
           </ul>
         </nav>
       </header>
@@ -29,43 +29,31 @@
       <main class="main-content">
 				<div class="block-filter clearfix">
 				  <form action="" method="post" name="filter-hotels">
-					  <div class="column color1">
+					  <div class="column">
 					    <div class="filter-infrast">
 					      <p>Инфраструктура:</p>
 
-					      <label for="pool">
-					        <input id="pool" type="checkbox">
-					        Бассейн
-					      </label>
+					      <input id="a1" type="checkbox">
+					      <label for="a1">Бассейн</label>
 
-					      <label for="parking">
-					        <input id="parking" type="checkbox">
-					        Парковка
-					      </label>
+					      <input id="a2" type="checkbox">
+					      <label for="a2">Парковка</label>
 
-					      <label for="wifi">
-					        <input id="wifi" type="checkbox">
-					        Wi-Fi
-					      </label>
+					      <input id="a3" type="checkbox">
+					      <label for="a3">Wi-Fi</label>
 					    </div>
 
 					    <div class="filter-hotel-types">
 					      <p>Тип жилья:</p>
 
-					      <label for="hotel">
-					        <input id="hotel" type="checkbox">
-					        Гостиница
-					      </label>
+					      <input id="s1" type="checkbox">
+					      <label for="s1">Гостиница</label>
 
-					      <label for="motel">
-					        <input id="motel" type="checkbox">
-					        Мотель
-					      </label>
+					      <input id="s2" type="checkbox">
+					      <label for="s2">Мотель</label>
 
-					      <label for="apartments">
-					        <input id="apartments" type="checkbox">
-					        Апартаменты
-					      </label>
+					      <input id="s3" type="checkbox">
+					      <label for="s3">Апартаменты</label>
 					    </div>
 					  </div>
 
@@ -76,12 +64,12 @@
 					      <div class="price-controls">
 					        <label class="min-price" for="from">
 					          От
-					          <input id="from" type="text" value="0" readonly>
+					          <input id="from" type="text" value="0">
 					        </label>
 
 					        <label class="max-price" for="to">
 					          До
-					          <input id="to" type="text" value="3000" readonly>
+					          <input id="to" type="text" value="3000">
 					        </label>
 					      </div>
 
@@ -101,7 +89,7 @@
 				</div>
 
 				<div class="block-sort clearfix">
-					<div class="column color1">
+					<div class="column">
 					  <div class="sort-result">
 					    Найдено:
 					    <span>3</span>
@@ -110,14 +98,14 @@
 					  <div class="sort-list">
 					    Сортировка:
 					    <ul>
-					      <li><a href="#">по цене</a></li>
+					      <li class="active"><a href="#">по цене</a></li>
 					      <li><a href="#">по типу</a></li>
 					      <li><a href="#">по рейтингу</a></li>
 					    </ul>
 					  </div>
 					</div>
 
-					<div class="column color2">
+					<div class="column">
 					  <div class="sort-icon">
 					    <a href="#"><div class="icon-top icon-up-dir"></div></a>
 					    <a href="#"><div class="icon-bottom icon-down-dir"></div></a>
@@ -127,7 +115,7 @@
 
 				<div class="block-list-hotel">
 				  <div class="row-hotel clearfix">
-					  <div class="column color1">
+					  <div class="column">
 					    <img src="img/hotels_img_amara.jpg" alt="Amara Resort & Spa" width="135" height="90">
 
 					    <div class="hotel-desc">
@@ -142,10 +130,9 @@
 					    </div>
 					  </div>
 
-						<div class="column color2">
+						<div class="column">
 					    <div class="rating">
 					      <ul class="stars">
-					        <li class="icon-star"></li>
 					        <li class="icon-star"></li>
 					        <li class="icon-star"></li>
 					        <li class="icon-star"></li>
@@ -157,7 +144,7 @@
 				  </div>
 
 				  <div class="row-hotel clearfix">
-					  <div class="column color1">
+					  <div class="column">
 					    <img src="img/hotels_img_desert.jpg" alt="Desert Quail Inn" width="135" height="90">
 
 					    <div class="hotel-desc">
@@ -172,12 +159,9 @@
 					    </div>
 					  </div>
 
-						<div class="column color2">
+						<div class="column">
 					    <div class="rating">
 					      <ul class="stars">
-					        <li class="icon-star"></li>
-					        <li class="icon-star"></li>
-					        <li class="icon-star"></li>
 					        <li class="icon-star"></li>
 					        <li class="icon-star"></li>
 					      </ul>
@@ -187,7 +171,7 @@
 				  </div>
 
 				  <div class="row-hotel clearfix">
-					  <div class="column color1">
+					  <div class="column">
 					    <img src="img/hotels_img_villas.jpg" alt="Villas at Poco Diablo" width="135" height="90">
 
 					    <div class="hotel-desc">
@@ -202,11 +186,9 @@
 					    </div>
 					  </div>
 
-						<div class="column color2">
+						<div class="column">
 					    <div class="rating">
 					      <ul class="stars">
-					        <li class="icon-star"></li>
-					        <li class="icon-star"></li>
 					        <li class="icon-star"></li>
 					        <li class="icon-star"></li>
 					        <li class="icon-star"></li>

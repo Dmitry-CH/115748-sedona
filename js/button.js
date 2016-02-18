@@ -1,6 +1,7 @@
-var a = document.getElementById('toggle'),
-    b = document.getElementById('open');
+var search = document.querySelector('.js-search'),
+    form   = document.querySelector('.search-form');
 
-toggle.onclick = function() {
-  b.classList.toggle('open');
-};
+search.addEventListener('click', function(event) {
+  event.preventDefault();
+  form.classList.toggle('open');
+});

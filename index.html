@@ -46,7 +46,7 @@
             <p>Седона &ndash; не аттракцион для туристов, там течет своя жизнь</p>
           </div>
 
-          <div class="picture img1"></div>
+          <div class="picture real-town"></div>
         </div>
 
         <div class="block-info clearfix">
@@ -67,7 +67,7 @@
         </div>
 
         <div class="block-img clearfix">
-          <div class="picture img2"></div>
+          <div class="picture devil-bridge"></div>
 
           <div class="box-title">
             <h3>Там есть<br> мост дьявола</h3>
@@ -102,30 +102,42 @@
             Укажите предполагаемые даты поездки,<br>
             и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
-          <a class="btn-search" id="toggle">Поиск гостиницы в седоне</a>
+          <a class="btn-search js-search" href="#">Поиск гостиницы в седоне</a>
 
-          <div class="search-form" id="open">
-            <form action="" method="post" name="">
-              <label class="date-of-stay icon-calendar">
-                <span>Дата Заезда:</span>
-                <input type="datetime" name="" value="" placeholder="24 Апреля 2016">
-              </label>
+          <div class="search-form">
+            <form action="" method="post" name="searchHotels">
+              <div class="row clearfix">
+                <label for="arrival">Дата Заезда:</label>
+                <div class="a1 icon-calendar">
+                  <input id="arrival" type="datetime" name="" value="" placeholder="24 Апреля 2016">
+                </div>
+              </div>
 
-              <label class="date-of-stay icon-calendar">
-                <span>Дата Выезда:</span>
-                <input type="datetime" name="" value="" placeholder="4 Июля 2016">
-              </label>
+              <div class="row clearfix">
+                <label for="departure">Дата Выезда:</label>
+                <div class="a1 icon-calendar">
+                  <input id="departure" type="datetime" name="" value="" placeholder="4 Июля 2016">
+                </div>
+              </div>  
+              
+              <div class="row clearfix">
+                <div class="number-of-people">
+                  <label for="adult">Взрослые:</label>
+                  <div class="input-container clearfix">
+                    <span class="icon-minus"></span>
+                    <input id="adult" class="inp-adults" type="text" name="" value="" placeholder="0">
+                    <span class="icon-plus"></span>
+                  </div>
+                </div>
 
-              <div class="clearfix">
-                <label class="number-of-people adult">
-                  <span class="indent">Взрослые:</span>
-                  <span class="position icon-minus icon-plus"><input type="text" name="" value="" placeholder="0"></span>
-                </label>
-
-                <label class="number-of-people kid">
-                  <span class="indent">Дети:</span>
-                  <span class="position icon-minus icon-plus"><input type="text" name="" value="" placeholder="0"></span>
-                </label>
+                <div class="number-of-people">
+                  <label for="kind" class="children">Дети:</label>
+                  <div class="input-container clearfix">
+                    <span class="icon-minus"></span>
+                    <input id="kind" type="text" name="" value="" placeholder="0">
+                    <span class="icon-plus"></span>
+                  </div>
+                </div> 
               </div>
 
               <a class="btn-search btn-search-form" href="#">Найти</a>
@@ -133,7 +145,9 @@
           </div>
         </div>
 
-        <div class="block-map"></div>
+        <div class="block-map">
+          <div id="yandex-map"></div>
+        </div>
       </main>
 
       <footer class="main-footer clearfix footer-position">
@@ -149,11 +163,14 @@
 
         <div class="footer-academy">
           <p>Website by</p>
-          <img class="academy-logo" src="img/footer_img_logo.png" alt="Html Academy" width="113" height="39">
+          <a href="#">
+            <img class="academy-logo" src="img/footer_img_logo.png" alt="Html Academy" width="113" height="39">
+          </a>
         </div>
       </footer>
     </div>
 
     <script src="js/button.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=bcsFo84a0ES0fboynlPqahB2Tmb7tJeJ&width=100%&height=593&lang=ru_RU&sourceType=constructor&id=yandex-map"></script>
   </body>
 </html>
