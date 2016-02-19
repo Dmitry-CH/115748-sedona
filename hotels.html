@@ -33,8 +33,8 @@
 					    <div class="filter-infrast">
 					      <p>Инфраструктура:</p>
 
-					      <input id="a1" type="checkbox">
-					      <label for="a1">Бассейн</label>
+					      <input id="a1" type="checkbox" disabled>
+					      <label class="disabled" for="a1">Бассейн</label>
 
 					      <input id="a2" type="checkbox">
 					      <label for="a2">Парковка</label>
@@ -46,8 +46,8 @@
 					    <div class="filter-hotel-types">
 					      <p>Тип жилья:</p>
 
-					      <input id="s1" type="checkbox">
-					      <label for="s1">Гостиница</label>
+					      <input id="s1" type="checkbox" disabled checked>
+					      <label class="disabled" for="s1">Гостиница</label>
 
 					      <input id="s2" type="checkbox">
 					      <label for="s2">Мотель</label>
@@ -89,27 +89,23 @@
 				</div>
 
 				<div class="block-sort clearfix">
-					<div class="column">
-					  <div class="sort-result">
-					    Найдено:
-					    <span>3</span>
-					  </div>
-
-					  <div class="sort-list">
-					    Сортировка:
-					    <ul>
-					      <li class="active"><a href="#">по цене</a></li>
-					      <li><a href="#">по типу</a></li>
-					      <li><a href="#">по рейтингу</a></li>
-					    </ul>
-					  </div>
+					<div class="sort-result">
+						Найдено:
+						<span>3</span>
 					</div>
 
-					<div class="column">
-					  <div class="sort-icon">
-					    <a href="#"><div class="icon-top icon-up-dir"></div></a>
-					    <a href="#"><div class="icon-bottom icon-down-dir"></div></a>
-					  </div>
+					<div class="sort-list">
+						Сортировка:
+						<ul>
+              <li class="list-active"><a href="#">по цене</a></li>
+              <li><a href="#">по типу</a></li>
+              <li><a href="#">по рейтингу</a></li>
+            </ul>
+					</div>
+
+					<div class="sort-icon">
+						<a class="icon-up-dir" href="#"></a>
+            <a class="icon-down-dir icon-active" href="#"></a>
 					</div>
 				</div>
 
@@ -119,7 +115,7 @@
 					    <img src="img/hotels_img_amara.jpg" alt="Amara Resort & Spa" width="135" height="90">
 
 					    <div class="hotel-desc">
-					      <h3>Amara Resort & Spa</h3>
+					      <a href="#"><h3>Amara Resort & Spa</h3></a>
 					      <p>Гостиница</p>
 					      <p>от 3500 р.</p>
 
@@ -148,7 +144,7 @@
 					    <img src="img/hotels_img_desert.jpg" alt="Desert Quail Inn" width="135" height="90">
 
 					    <div class="hotel-desc">
-					      <h3>Desert Quail Inn</h3>
+					      <a href="#"><h3>Desert Quail Inn</h3></a>
 					      <p>Мотель</p>
 					      <p>от 2000 р.</p>
 
@@ -175,7 +171,7 @@
 					    <img src="img/hotels_img_villas.jpg" alt="Villas at Poco Diablo" width="135" height="90">
 
 					    <div class="hotel-desc">
-					      <h3>Villas at Poco Diablo</h3>
+					      <a href="#"><h3>Villas at Poco Diablo</h3></a>
 					      <p>Апартаменты</p>
 					      <p>от 4000 р.</p>
 
@@ -211,9 +207,9 @@
           <a class="social-btn icon-youtube" href="#">Ютуб</a>
         </div>
 
-        <div class="footer-academy footer-size">
+        <div class="footer-academy">
           <p>Website by</p>
-          <img class="academy-logo" src="img/footer_img_logo.png" alt="Html Academy" width="113" height="39">
+          <a href="#"></a>
         </div>
       </footer>
 		</div>
