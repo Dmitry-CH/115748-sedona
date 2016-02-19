@@ -15,19 +15,6 @@
 }
 
 
-.color1 {
-	background-color: #D8BFD8;
-}
-
-.color2 {
-	background-color: #DDA0DD;
-}
-
-.color3 {
-	background-color: #EE82EE;
-}
-
-
 html {
   box-sizing: border-box;
 }
@@ -627,7 +614,7 @@ h3 {
 
 .filter-infrast p,
 .filter-hotel-types p {
-	margin-bottom: 30px;
+	margin-bottom: 22px;
 	font-size: 16px;
 	line-height: 21px;
 	font-weight: bold;
@@ -637,7 +624,7 @@ h3 {
 .filter-infrast label,
 .filter-hotel-types label {
 	display: block;
-	margin-bottom: 23px;
+	margin-bottom: 24px;
 	color: #ffffff;
 	cursor: pointer;
 }
@@ -653,7 +640,7 @@ h3 {
   display: inline-block;
   vertical-align: middle;
   width: 20px;
-  margin-right: 10px;
+  margin-right: 19px;
 	font-size: 26px;
 	line-height: 20px;
   font-weight: normal;
@@ -674,45 +661,7 @@ h3 {
 	cursor: default;
 }
 
-.block-sort {
-	padding-top: 27px;
-	padding-bottom: 27px;
-	border-bottom: 1px solid #e5e5e5;
-}
 
-.sort-result,
-.sort-list,
-.sort-icon,
-.sort-list ul,
-.sort-list li {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.sort-list ul {
-	padding: 0;
-	margin-left: 0;
-	list-style: none;
-}
-
-
-.sort-icon .icon-up-dir::before,
-.sort-icon .icon-down-dir::before {
-	width: 14px;
-	margin: 0;
-	font-size: 23px;
-	line-height: 20px;
-	color: #cccccc;
-	text-decoration: none;
-}
-
-.sort-icon .icon-down-dir {
-	margin-left: 6px;
-}
-
-.sort-icon .icon-active::before {
-	color: #81b3d2;
-}
 
 
 .block-list-hotel .row-hotel {
@@ -732,7 +681,7 @@ h3 {
 }
 
 .block-list-hotel img {
-	margin-right: 30px;
+	margin-right: 26px;
 }
 
 .hotel-desc h3,
@@ -752,10 +701,13 @@ h3 {
 	text-decoration: none;
 }
 
+.hotel-desc p {
+	display: inline-block;
+	width: 111px;
+}
+
 .hotel-desc p:last-of-type {
-	position: absolute;
-	right: 0;
-	margin-right: 78px;
+	margin-left: 2px;
 }
 
 .buttons a {
@@ -776,7 +728,7 @@ h3 {
 }
 
 .buttons a:last-child {
-	margin-left: 6px;
+	margin-left: 1px;
 	background-color: #766357;
 }
 
@@ -803,7 +755,7 @@ h3 {
 }
 
 .block-list-hotel .stars li::before {
-	margin: 0 1px;
+	margin: 0;
 	font-size: 19px;
 	color: #81b3d2;
 }
@@ -815,6 +767,110 @@ h3 {
 }
 
 
+
+.block-sort {
+	padding-top: 27px;
+	padding-bottom: 27px;
+	border-bottom: 1px solid #e5e5e5;
+	font-size: 0;
+}
+
+.sort-result,
+.sort-list,
+.sort-list ul,
+.sort-list li,
+.inline-column {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.block-sort .inline-column {
+	width: 50%;
+}
+
+.block-sort .sort-result {
+	margin-right: 48px;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.block-sort .sort-list {
+	font-size: 12px;
+}
+
+.block-sort .sort-list ul {
+	padding: 0;
+	margin: 0;
+	margin-top: -4px;
+	list-style: none;
+}
+
+.block-sort .sort-list li {
+	margin-right: 20px;
+}
+
+.block-sort .sort-list li:first-child {
+	margin-left: 40px;
+}
+
+.block-sort .sort-list a {
+	color: #cccccc;
+	text-decoration: none;
+	border-bottom: 1px dotted #81b3d2;
+}
+
+.block-sort .sort-list a:hover {
+	color: #81b3d2;
+}
+
+.block-sort .sort-list a:active {
+	color: #000000;
+	border-bottom: none;
+}
+
+.sort-list .list-active a {
+	color: #81b3d2;
+	border-bottom: none;
+}
+
+.block-sort .sort-icon {
+	text-align: right;
+}
+
+.sort-icon .icon-up-dir::before,
+.sort-icon .icon-down-dir::before {
+	width: 14px;
+	margin: 0;
+	font-size: 23px;
+	line-height: 20px;
+	color: #cccccc;
+	text-decoration: none;
+}
+
+.sort-icon .icon-down-dir::before {
+	margin-left: 6px;
+}
+
+.sort-icon .icon-active::before {
+	color: #81b3d2;
+}
+
+.sort-icon .icon-up-dir:hover::before,
+.sort-icon .icon-down-dir:hover::before {
+	color: #000000;
+}
+
+.sort-icon .icon-up-dir:active::before,
+.sort-icon .icon-down-diractive::before {
+	color: #81b3d2;
+}
+
+
+
+
+
+
+/* === Filter === */
 
 .filter-cost {
 	display: inline-block;
