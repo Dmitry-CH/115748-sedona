@@ -1,3 +1,66 @@
+/* === Font PT Sans === */
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/pt_sans/ptsans.woff") format("woff"),
+       url("../fonts/pt_sans/ptsans.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/pt_sans/ptsansbold.woff") format("woff"),
+       url("../fonts/pt_sans/ptsansbold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "symbols-sedona";
+  src: url("../fonts/symbols_sedona/symbols-sedona.woff") format("woff"),
+       url("../fonts/symbols_sedona/symbols-sedona.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]::before,
+[class^="icon-"]::after,
+[class*=" icon-"]::before,
+[class*=" icon-"]::after {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+
+  line-height: 1em;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-family: "symbols-sedona";
+  text-align: center;
+  text-transform: none;
+  text-decoration: inherit;
+
+  speak: none;
+}
+
+.icon-facebook::before { content: "\66"; }
+.icon-twitter::before { content: "\74"; }
+.icon-up-dir::before { content: "\25b2"; }
+.icon-down-dir::before { content: "\25bc"; }
+.icon-star::before { content: "\2605"; }
+.icon-check-off::before { content: "\2610"; }
+.icon-check-on::before { content: "\2611"; }
+.icon-calendar::before { content: "\e800"; }
+.icon-plus::after { content: "\e801"; }
+.icon-minus::before { content: "\e802"; }
+.icon-youtube::before { content: "\f39e"; }
+
+
+/* === Main Css === */
+
 .clearfix::after {
   content: "";
   display: table;
@@ -146,6 +209,7 @@ h3 {
 	background-size: contain;
 }
 
+
 .content-info {
 	padding: 10px 0;
 	line-height: 26px;
@@ -165,6 +229,7 @@ h3 {
 .content-info p:last-child {
 	margin-bottom: 38px;
 }
+
 
 .block-img {
 	height: 256px;
@@ -216,6 +281,7 @@ h3 {
 	background-size: cover;
 }
 
+
 .block-info .info,
 .block-desc .desc {
 	float: left;
@@ -265,6 +331,7 @@ h3 {
 	background-position: -182px 0;
 }
 
+
 .block-desc .desc {
 	background-color: #eeeeee;
 }
@@ -281,6 +348,7 @@ h3 {
 .block-desc p:last-child {
 	margin-bottom: 58px;
 }
+
 
 .block-search {
 	position: relative;
@@ -309,6 +377,7 @@ h3 {
 	background-color: #766357;
 	cursor: pointer;
 }
+
 
 .search-form {
 	z-index: 20;
@@ -487,6 +556,8 @@ h3 {
 
 .block-map {
 	height: 593px;
+	background: url(../img/index_bg_map.jpg) no-repeat;
+	background-position: center;
 }
 
 
@@ -523,6 +594,7 @@ h3 {
 	width: 46px;
 	height: 48px;
 	margin-right: 6px;
+	text-decoration: none;
 	background-color: #81b3d2;
 }
 
@@ -553,7 +625,6 @@ h3 {
 	transform: translate(-50%, -50%);
 	font-size: 23px;
 	color: #ffffff;
-	text-decoration: none;
 }
 
 .footer-academy p,
@@ -583,6 +654,7 @@ h3 {
 .footer-academy a:active {
 	background-position: -10px -106px;
 }
+
 
 /* === Hotels.html === */
 
@@ -662,6 +734,105 @@ h3 {
 }
 
 
+.block-sort {
+	padding-top: 27px;
+	padding-bottom: 27px;
+	border-bottom: 1px solid #e5e5e5;
+	font-size: 0;
+}
+
+.sort-result,
+.sort-list,
+.sort-list ul,
+.sort-list li,
+.inline-column {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.block-sort .inline-column {
+	width: 50%;
+}
+
+.block-sort .sort-result {
+	margin-right: 48px;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.block-sort .sort-list {
+	font-size: 12px;
+}
+
+.block-sort .sort-list ul {
+	padding: 0;
+	margin: 0;
+	margin-top: -4px;
+	list-style: none;
+}
+
+.block-sort .sort-list li {
+	margin-right: 20px;
+}
+
+.block-sort .sort-list li:first-child {
+	margin-left: 40px;
+}
+
+.block-sort .sort-list a {
+	color: #cccccc;
+	text-decoration: none;
+	border-bottom: 1px dotted #81b3d2;
+}
+
+.block-sort .sort-list a:hover {
+	color: #81b3d2;
+}
+
+.block-sort .sort-list a:active {
+	color: #000000;
+	border-bottom: none;
+}
+
+.sort-list .list-active a {
+	color: #81b3d2;
+	border-bottom: none;
+}
+
+.block-sort .sort-icon {
+	text-align: right;
+}
+
+.sort-icon a {
+	text-decoration: none;
+}
+
+.sort-icon .icon-up-dir::before,
+.sort-icon .icon-down-dir::before {
+	width: 14px;
+	margin: 0;
+	font-size: 23px;
+	line-height: 20px;
+	color: #cccccc;
+}
+
+.sort-icon .icon-down-dir::before {
+	margin-left: 6px;
+}
+
+.sort-icon .icon-active::before {
+	color: #81b3d2;
+}
+
+.sort-icon .icon-up-dir:hover::before,
+.sort-icon .icon-down-dir:hover::before {
+	color: #000000;
+}
+
+.sort-icon .icon-up-dir:active::before,
+.sort-icon .icon-down-diractive::before {
+	color: #81b3d2;
+}
 
 
 .block-list-hotel .row-hotel {
@@ -767,110 +938,7 @@ h3 {
 }
 
 
-
-.block-sort {
-	padding-top: 27px;
-	padding-bottom: 27px;
-	border-bottom: 1px solid #e5e5e5;
-	font-size: 0;
-}
-
-.sort-result,
-.sort-list,
-.sort-list ul,
-.sort-list li,
-.inline-column {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.block-sort .inline-column {
-	width: 50%;
-}
-
-.block-sort .sort-result {
-	margin-right: 48px;
-	font-size: 21px;
-	font-weight: bold;
-}
-
-.block-sort .sort-list {
-	font-size: 12px;
-}
-
-.block-sort .sort-list ul {
-	padding: 0;
-	margin: 0;
-	margin-top: -4px;
-	list-style: none;
-}
-
-.block-sort .sort-list li {
-	margin-right: 20px;
-}
-
-.block-sort .sort-list li:first-child {
-	margin-left: 40px;
-}
-
-.block-sort .sort-list a {
-	color: #cccccc;
-	text-decoration: none;
-	border-bottom: 1px dotted #81b3d2;
-}
-
-.block-sort .sort-list a:hover {
-	color: #81b3d2;
-}
-
-.block-sort .sort-list a:active {
-	color: #000000;
-	border-bottom: none;
-}
-
-.sort-list .list-active a {
-	color: #81b3d2;
-	border-bottom: none;
-}
-
-.block-sort .sort-icon {
-	text-align: right;
-}
-
-.sort-icon .icon-up-dir::before,
-.sort-icon .icon-down-dir::before {
-	width: 14px;
-	margin: 0;
-	font-size: 23px;
-	line-height: 20px;
-	color: #cccccc;
-	text-decoration: none;
-}
-
-.sort-icon .icon-down-dir::before {
-	margin-left: 6px;
-}
-
-.sort-icon .icon-active::before {
-	color: #81b3d2;
-}
-
-.sort-icon .icon-up-dir:hover::before,
-.sort-icon .icon-down-dir:hover::before {
-	color: #000000;
-}
-
-.sort-icon .icon-up-dir:active::before,
-.sort-icon .icon-down-diractive::before {
-	color: #81b3d2;
-}
-
-
-
-
-
-
-/* === Filter === */
+/* === Filter-Cost === */
 
 .filter-cost {
 	display: inline-block;
